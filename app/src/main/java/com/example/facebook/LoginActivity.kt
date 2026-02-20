@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -23,10 +24,17 @@ class LoginActivity : AppCompatActivity() {
         val etUsername = findViewById<EditText>(R.id.etUsername)
         val etPass = findViewById<EditText>(R.id.etPass)
         val btnLogin = findViewById<Button>(R.id.btnLogin)
+        val tvConfirmPassword = findViewById<TextView>(R.id.tvConfirmPassword)
 
         btnLogin.setOnClickListener {
             Toast.makeText(this,"Login successfull,welcome",Toast.LENGTH_SHORT).show()
             val intent = Intent(this, HomePage::class.java)
+            startActivity(intent)
+            finish()
+        }
+        tvConfirmPassword.setOnClickListener {
+            Toast.makeText(this,"are you new here,then register",Toast.LENGTH_SHORT).show()
+            val intent = Intent(this, RegisterActivity::class.java)
             startActivity(intent)
             finish()
         }

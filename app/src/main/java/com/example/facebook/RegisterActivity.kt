@@ -25,7 +25,7 @@ class RegisterActivity : AppCompatActivity() {
         val etName = findViewById<EditText>(R.id.etName)
         val etPassword = findViewById<EditText>(R.id.etPassword)
         val btnRegister = findViewById<Button>(R.id.btnRegister)
-        val tvConfirmPassword = findViewById<TextView>(R.id.tvConfirmPassword)
+
 
         btnRegister.setOnClickListener {
             Toast.makeText(this,"Registration successfull!",Toast.LENGTH_SHORT).show()
